@@ -245,7 +245,7 @@ try:
             if not is_installed('GitPython'):
                 process_wrap(pip_install + ['GitPython'])
 
-        ensure_subpack()  # The installation of the subpack must take place before ensure_pip. cv2 triggers a permission error.
+        #ensure_subpack()  # The installation of the subpack must take place before ensure_pip. cv2 triggers a permission error.
 
         new_env = os.environ.copy()
         new_env["COMFYUI_PATH"] = comfy_path
