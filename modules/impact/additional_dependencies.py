@@ -7,6 +7,6 @@ def ensure_onnx_package():
         import onnxruntime
     except Exception:
         if "python_embeded" in sys.executable or "python_embedded" in sys.executable:
-            subprocess.check_call([sys.executable, '-s', '-m', 'pip', 'install', 'onnxruntime'])
+            subprocess.check_call([sys.executable, '-s', '-m', 'pip', 'install', 'onnxruntime==1.18.0'])
         else:
-            subprocess.check_call([sys.executable, '-s', '-m', 'pip', 'install', 'onnxruntime'])
+            subprocess.check_call([sys.executable, '-s', '-m', 'pip', 'install', 'onnxruntime==1.18.0'])
